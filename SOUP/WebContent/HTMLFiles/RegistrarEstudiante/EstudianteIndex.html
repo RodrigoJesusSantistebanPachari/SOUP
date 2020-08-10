@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>SOUP|Estudiante Home</title>
+<!--Pagina donde muestrar las acciones a realizar (eliminar/registrar estudiante)-->
+<style>
+body {
+  background-image: url("/SOUP/Images/background.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: cover;
+}
+
+
+.box {
+    margin: auto;
+  	font-size: 16px;
+	width: 23%;
+	text-align: center;
+}
+
+.ingrese {
+  font-size: 16px;
+  border: 1px solid black;
+  margin: 15px 0px;
+  width: 80%;
+  text-align: center;
+	
+}
+
+.button {
+	background-color: #9ee000;
+  	border: 2px solid #003A83;
+  	color: #003A83;
+	padding: 10px;
+  	font-size: 16px;
+ 	margin: 20px 0px;
+	width: 30%;
+
+	}
+	
+.button:hover {
+  background-color: #003A83;
+  color: #9ee000;
+}
+
+
+.fila
+{
+ 	display: flex;
+  	justify-content: center;
+}
+
+.seleccion
+{
+  width: 75%;
+  background-color: #9ee000;
+  text-align: center;
+}
+
+</style>
+
+</head>
+<body>
+<a href="/SOUP/Index.html"><button type="button" style="width:90px" class="button">Regresar</button></a><br>
+
+<div class="box" style="margin-top: 5px;">
+
+<img src="/SOUP/Images/logo.png" style="width:50%;margin-top:50px;">
+<p style="color: white">Registro y eliminación de estudiantes</p>
+</div>
+
+
+<div class="box" style="margin-top: 40px; width: 50%;">
+<!--Redirecciona a la pagina de registrar estudiante -->
+	<a href="HTMLFiles/RegistrarEstudiante/Registro.jsp"><button type="button" id="boton" class="button">Registrar Estudiante</button></a>
+<!--Redirecciona a la pagina de eliminar estudiante -->	
+	<a href="HTMLFiles/RegistrarEstudiante/EliminarEstudiante.jsp"><button type="button" id="boton" class="button">Eliminar Estudiante</button></a>
+</div>
+
+</body>
+</html>

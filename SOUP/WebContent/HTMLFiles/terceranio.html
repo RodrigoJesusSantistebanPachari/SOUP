@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Tercero</title>
+</head>
+
+<style>
+body {
+  background-image: url("/SOUP/Images/background.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: cover;
+}
+
+.box {
+        margin: auto;
+  	font-size: 16px;
+	width: 23%;
+	text-align: center;
+	color: white
+}
+
+.button {
+	background-color: #9ee000;
+  	border: 2px solid #003A83;
+  	color: #003A83;
+	padding: 10px;
+  	font-size: 16px;
+	width: 50%;
+
+	}
+
+.button:hover {
+  background-color: #003A83;
+  color: #9ee000;
+}
+
+
+.seleccion
+{
+  width: 100%;
+  background-color: #9ee000;
+}
+
+</style>
+
+<body>
+
+
+<div class="box" style="margin-top: 100px;">
+<img src="/SOUP/Images/logo.png" style="width:50%;margin-top:50px;">
+<h2>Los cursos de tercer año son:</h2>
+<p>Haga click en el que quiera matricularse</p>
+</div>
+
+
+<div class="box" style="margin-top: 40px; width: 50%;">
+
+
+   <button type="button" id="boton" class="button" onclick="show(primer,segundo,boton2)">Primer Semestre</button>
+
+   <button type="button" id="boton2" class="button" onclick="show(segundo,primer,boton)">Segundo Semestre</button>
+
+
+<div id="primer" name="primer" style="display:none">
+   <select id="curso" size="4" class= "seleccion" onchange="javascript:handleSelect(this)">
+	<option value="Analisis Exploratorio de Datos Espaciales">Análisis Exploratorio de Datos Espaciales</option>
+	<option value="Analisis y disenio de algoritmos">Análisis y diseño de algoritmos</option>
+  <option value="Base de Datos II">Base de Datos II</option>
+  <option value="Ecuaciones Diferenciales">Ecuaciones Diferenciales</option>
+	<option value="Ingenieria de Software I">Ingeniería de Software I</option>
+    
+   </select>
+ </div>
+
+ <div id="segundo" name="segundo" style="display:none">
+
+   <select id="curso2" size="4" class= "seleccion" onchange="javascript:handleSelect(this)">
+	<option value="Estructuras de Datos Avanzados">Estructuras de Datos Avanzados</option>
+	<option value="Ingenieria de Software II">Ingeniería de Software II</option>
+  <option value="Matematica Aplicada a la Computacion">Matemática Aplicada a la Computación</option>
+  <option value="Programacion Competitiva">Programación Competitiva</option>
+  <option value="Sistemas Operativos">Sistemas Operativos</option>
+    <script type="text/javascript">
+    function handleSelect(elm)
+    {
+  	  if(elm.value=="Analisis Exploratorio de Datos Espaciales")
+      	 	window.location = "Cursos/CursoModel.jsp?value="+elm.value+"&idCurso=311";
+    	  if(elm.value=="Analisis y disenio de algoritmos")
+        	 	window.location = "Cursos/CursoModel.jsp?value="+elm.value+"&idCurso=312";
+    	  if(elm.value=="Base de Datos II")
+        	 	window.location = "Cursos/CursoModel.jsp?value="+elm.value+"&idCurso=313";
+    	  if(elm.value=="Ecuaciones Diferenciales")
+        	 	window.location = "Cursos/CursoModel.jsp?value="+elm.value+"&idCurso=314";
+	      	if(elm.value=="Ingenieria de Software I")
+	      	 	window.location = "Cursos/CursoModel.jsp?value="+elm.value+"&idCurso=315";
+	  	  if(elm.value=="Estructuras de Datos Avanzados")
+	      	 	window.location = "Cursos/CursoModel.jsp?value="+elm.value+"&idCurso=321";
+	  	  if(elm.value=="Ingenieria de Software II")
+	      	 	window.location = "Cursos/CursoModel.jsp?value="+elm.value+"&idCurso=322";
+	  	 if(elm.value=="Matematica Aplicada a la Computacion")
+	      	 	window.location = "Cursos/CursoModel.jsp?value="+elm.value+"&idCurso=323";
+	  	  if(elm.value=="Programacion Competitiva")
+	      	 	window.location = "Cursos/CursoModel.jsp?value="+elm.value+"&idCurso=324";
+	  	if(elm.value=="Sistemas Operativos")
+      	 	window.location = "Cursos/CursoModel.jsp?value="+elm.value+"&idCurso=325";
+    }
+	</script>
+   </select> 
+ </div>
+<BR>
+</div>
+
+
+
+<script>
+
+function show(semestre,semestre2,x) 
+{
+  semestre.style.display = "block";
+  semestre2.style.display = "none";
+  x.style.display = "none";
+  document.getElementById("submit").style.display = "block";
+}
+</script>
+
+</body>
+</html>

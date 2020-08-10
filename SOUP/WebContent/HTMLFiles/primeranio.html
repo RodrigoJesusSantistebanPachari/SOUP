@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+	<title>Primero</title>
+</head>
+
+<style>
+body {
+  background-image: url("/SOUP/Images/background.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: cover;
+}
+
+.box {
+        margin: auto;
+  	font-size: 16px;
+	width: 23%;
+	text-align: center;
+	color: white
+}
+
+.button {
+	background-color: #9ee000;
+  	border: 2px solid #003A83;
+  	color: #003A83;
+	padding: 10px;
+  	font-size: 16px;
+	width: 50%;
+
+	}
+
+.button:hover {
+  background-color: #003A83;
+  color: #9ee000;
+}
+
+
+.seleccion
+{
+  width: 100%;
+  background-color: #9ee000;
+}
+
+</style>
+
+<body>
+
+
+<div class="box" style="margin-top: 50px;">
+
+<img src="/SOUP/Images/logo.png" style="width:50%;margin-top:50px;">
+<h2>Los cursos de primer año son:</h2>
+<p>Haga click en el que quiera matricularse</p>
+
+</div>
+
+
+<div class="box" style="margin-top: 40px; width: 50%;">
+
+
+   <button type="button" id="boton" class="button" onclick="show(primer,segundo,boton2)">Primer Semestre</button>
+
+   <button type="button" id="boton2" class="button" onclick="show(segundo,primer,boton)">Segundo Semestre</button>
+
+
+ <div id="primer" name="primer" style="display:none">
+   <select id="curso" size="4" class= "seleccion" onchange="javascript:handleSelect(this)">
+  <option value="Fundamentos de Computacion" >Fundamentos de Computacion</option>
+	<option value="Arte Computacional">Arte Computacional</option>
+
+  </select>
+ </div>
+
+ <div id="segundo" name="segundo" style="display:none">
+
+   <select id="curso2" size="4" class= "seleccion" onchange="javascript:handleSelect(this)">
+	<option value="Ciencia de la Computacion I">Ciencia de la Computacion I</option>
+	<option value="Estructuras Discretas II">Estructuras Discretas II</option>
+     <script type="text/javascript">
+      function handleSelect(elm)
+      {
+    	  if(elm.value=="Arte Computacional")
+      	 	window.location = "Cursos/CursoModel.jsp?value="+elm.value+"&idCurso=111";
+    	  if(elm.value=="Fundamentos de Computacion")
+        	 	window.location = "Cursos/CursoModel.jsp?value="+elm.value+"&idCurso=112";
+    	  if(elm.value=="Ciencia de la Computacion I")
+        	 	window.location = "Cursos/CursoModel.jsp?value="+elm.value+"&idCurso=121";
+    	  if(elm.value=="Estructuras Discretas II")
+        	 	window.location = "Cursos/CursoModel.jsp?value="+elm.value+"&idCurso=122";
+          
+        
+      }
+</script>
+   </select> 
+ </div>
+<BR>
+</div>
+
+
+
+<script>
+
+function show(semestre,semestre2,x) 
+{
+  semestre.style.display = "block";
+  semestre2.style.display = "none";
+  x.style.display = "none";
+  document.getElementById("submit").style.display = "block";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+	<title>Quinto</title>
+</head>
+
+<style>
+body {
+  background-image: url("/SOUP/Images/background.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: cover;
+}
+
+.box {
+        margin: auto;
+  	font-size: 16px;
+	width: 23%;
+	text-align: center;
+	color: white
+}
+
+.button {
+	background-color: #9ee000;
+  	border: 2px solid #003A83;
+  	color: #003A83;
+	padding: 10px;
+  	font-size: 16px;
+	width: 50%;
+
+	}
+
+.button:hover {
+  background-color: #003A83;
+  color: #9ee000;
+}
+
+
+.seleccion
+{
+  width: 100%;
+  background-color: #9ee000;
+}
+
+</style>
+
+<body>
+
+
+<div class="box" style="margin-top: 100px;">
+
+<img src="/SOUP/Images/logo.png" style="width:50%;margin-top:50px;">
+<h2>Los cursos de quinto año son:</h2>
+<p>Haga click en el que quiera matricularse</p>
+
+</div>
+
+
+<div class="box" style="margin-top: 40px; width: 50%;">
+
+
+   <button type="button" id="boton" class="button" onclick="show(primer,segundo,boton2)">Primer Semestre</button>
+
+   <button type="button" id="boton2" class="button" onclick="show(segundo,primer,boton)">Segundo Semestre</button>
+
+
+ <div id="primer" name="primer" style="display:none">
+   <select id="curso" size="4" class= "seleccion" onchange="javascript:handleSelect(this)">
+	<option value="Computacion Bioinspirada">Computación Bioinspirada</option>
+	<option value="Computacion Molecular Biologica">Computacion Molecular Biológica</option>
+	<option value="Topicos en Base de Datos">Tópicos en Base de Datos</option>
+	<option value="Topicos en IA">Tópicos en IA</option>
+
+   </select>
+ </div>
+
+ <div id="segundo" name="segundo" style="display:none">
+
+   <select id="curso2" size="4" class= "seleccion" onchange="javascript:handleSelect(this)">
+	<option value="Computacion en la Nube">Computación en la Nube</option>
+	<option value="Liderazgo y Desarrollo Empresarial">Liderazgo y Desarrollo Empresarial</option>
+  <option value="Programacion en Dispositivos Moviles">Programación en Dispositivos Móviles</option>
+  <option value="Programacion de Videojuegos">Programación de Videojuegos</option>
+  <option value="Robotica">Robótica</option>
+  <script type="text/javascript">
+    function handleSelect(elm)
+      {
+    	if(elm.value=="Computacion Bioinspirada")
+      	 	window.location = "Cursos/CursoModel.jsp?value="+elm.value+"&idCurso=511";
+    	  if(elm.value=="Computacion Molecular Biologica")
+        	 	window.location = "Cursos/CursoModel.jsp?value="+elm.value+"&idCurso=512";
+    	  if(elm.value=="Topicos en Base de Datos")
+        	 	window.location = "Cursos/CursoModel.jsp?value="+elm.value+"&idCurso=513";
+    	  if(elm.value=="Topicos en IA")
+        	 	window.location = "Cursos/CursoModel.jsp?value="+elm.value+"&idCurso=514";
+	      	if(elm.value=="Computacion en la Nube")
+	      	 	window.location = "Cursos/CursoModel.jsp?value="+elm.value+"&idCurso=521";
+	  	  if(elm.value=="Liderazgo y Desarrollo Empresarial")
+	      	 	window.location = "Cursos/CursoModel.jsp?value="+elm.value+"&idCurso=522";
+	  	  if(elm.value=="Programacion en Dispositivos Moviles")
+	      	 	window.location = "Cursos/CursoModel.jsp?value="+elm.value+"&idCurso=523";
+	  	 if(elm.value=="Programacion de Videojuegos")
+	      	 	window.location = "Cursos/CursoModel.jsp?value="+elm.value+"&idCurso=524";
+	  	  if(elm.value=="Robotica")
+	      	 	window.location = "Cursos/CursoModel.jsp?value="+elm.value+"&idCurso=525";
+
+      }
+</script>
+   </select> 
+ </div>
+<BR>
+</div>
+
+
+
+<script>
+
+function show(semestre,semestre2,x) 
+{
+  semestre.style.display = "block";
+  semestre2.style.display = "none";
+  x.style.display = "none";
+  document.getElementById("submit").style.display = "block";
+}
+</script>
+
+</body>
+</html>

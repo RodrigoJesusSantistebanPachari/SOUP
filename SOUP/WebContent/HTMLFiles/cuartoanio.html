@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<head>
+	<title>Matriculas>año>primero</title>
+</head>
+
+<style>
+body {
+  background-image: url("/SOUP/Images/background.png");
+  ");
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: cover;
+}
+
+.box {
+        margin: auto;
+  	font-size: 16px;
+	width: 23%;
+	text-align: center;
+	color: white
+}
+
+.button {
+	background-color: #9ee000;
+  	border: 2px solid #003A83;
+  	color: #003A83;
+	padding: 10px;
+  	font-size: 16px;
+	width: 50%;
+
+	}
+
+.button:hover {
+  background-color: #003A83;
+  color: #9ee000;
+}
+
+
+.seleccion
+{
+  width: 100%;
+  background-color: #9ee000;
+}
+
+</style>
+
+<body>
+
+
+<div class="box" style="margin-top: 100px;">
+
+<img src="/SOUP/Images/logo.png" style="width:50%;margin-top:50px;">
+<h2>Los cursos de cuarto año son:</h2>
+<p>Haga click en el que quiera matricularse</p>
+
+</div>
+
+
+<div class="box" style="margin-top: 40px; width: 50%;">
+
+
+   <button type="button" id="boton" class="button" onclick="show(primer,segundo,boton2)">Primer Semestre</button>
+
+   <button type="button" id="boton2" class="button" onclick="show(segundo,primer,boton)">Segundo Semestre</button>
+
+
+ <div id="primer" name="primer" style="display:none">
+   <select id="curso" size="4" class= "seleccion" onchange="javascript:handleSelect(this)">
+	<option value="Computacion Grafica">Computación Gráfica</option>
+	<option value="Desarrollo de Software Empresarial">Desarrollo de Software Empresarial</option>
+  <option value="Inteligencia Artificial">Inteligencia Artificial</option>
+  <option value="Redes y Comunicacion">Redes y Comunicación</option>
+  
+   </select>
+ </div>
+
+ <div id="segundo" name="segundo" style="display:none">
+
+   <select id="curso2" size="5" class= "seleccion" onchange="javascript:handleSelect(this)">
+	<option value="Computacion Paralela Distribuida">Computación Paralela Distribuida</option>
+	<option value="Fisica Computacional">Física Computacional</option>
+  <option value="Interacción Humano Computador">Interacción Humano Computador</option>
+  <option value="Seguridad Computacional">Seguridad Computacional</option>
+  <option value="Topicos en Ingenieria de Software">Tópicos en Ingeniería de Software</option>
+  <script type="text/javascript">
+    function handleSelect(elm)
+      {
+    		if(elm.value=="Computacion Grafica")
+      	 		window.location = "Cursos/CursoModel.jsp?value="+elm.value+"&idCurso=411";
+    	  if(elm.value=="Desarrollo de Software Empresarial")
+        	 	window.location = "Cursos/CursoModel.jsp?value="+elm.value+"&idCurso=412";
+    	  if(elm.value=="Inteligencia Artificial")
+        	 	window.location = "Cursos/CursoModel.jsp?value="+elm.value+"&idCurso=413";
+    	  if(elm.value=="Redes y Comunicacion")
+        	 	window.location = "Cursos/CursoModel.jsp?value="+elm.value+"&idCurso=414";
+	      	if(elm.value=="Computacion Paralela Distribuida")
+	      	 	window.location = "Cursos/CursoModel.jsp?value="+elm.value+"&idCurso=411";
+	  	  if(elm.value=="Fisica Computacional")
+	      	 	window.location = "Cursos/CursoModel.jsp?value="+elm.value+"&idCurso=422";
+	  	  if(elm.value=="Interacción Humano Computador")
+	      	 	window.location = "Cursos/CursoModel.jsp?value="+elm.value+"&idCurso=423";
+	  	 if(elm.value=="Seguridad Computacional")
+	      	 	window.location = "Cursos/CursoModel.jsp?value="+elm.value+"&idCurso=424";
+	  	  if(elm.value=="Topicos en Ingenieria de Software")
+	      	 	window.location = "Cursos/CursoModel.jsp?value="+elm.value+"&idCurso=425";
+	  	
+      }
+</script>
+   </select> 
+ </div>
+<BR>
+</div>
+
+
+
+<script>
+
+function show(semestre,semestre2,x) 
+{
+  semestre.style.display = "block";
+  semestre2.style.display = "none";
+  x.style.display = "none";
+  document.getElementById("submit").style.display = "block";
+}
+</script>
+
+</body>
+</html>

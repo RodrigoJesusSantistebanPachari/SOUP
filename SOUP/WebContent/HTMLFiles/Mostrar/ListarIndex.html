@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>SOUP|ListarIndex</title>
+
+<!--Muestra las opciones a realizar: listar los estudiantes de un curso o mostrar los cursos en los que un estudiantes esta -->
+<style>
+body {
+  background-image: url("/SOUP/Images/background.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: cover;
+}
+
+
+.box {
+    margin: auto;
+  	font-size: 16px;
+	width: 23%;
+	text-align: center;
+}
+
+.ingrese {
+  font-size: 16px;
+  border: 1px solid black;
+  margin: 15px 0px;
+  width: 80%;
+  text-align: center;
+	
+}
+
+.button {
+	background-color: #9ee000;
+  	border: 2px solid #003A83;
+  	color: #003A83;
+	padding: 10px;
+  	font-size: 16px;
+ 	margin: 20px 0px;
+	width: 19%;
+
+	}
+	
+.button:hover {
+  background-color: #003A83;
+  color: #9ee000;
+}
+
+
+.fila
+{
+ 	display: flex;
+  	justify-content: center;
+}
+
+.seleccion
+{
+  width: 75%;
+  background-color: #9ee000;
+  text-align: center;
+}
+
+</style>
+
+
+</head>
+
+<body>
+<a href="/SOUP/Index.html"><button type="button" style="width:90px" class="button">Regresar</button></a><br>
+<div class="box" style="margin-top: 5px;">
+
+<img src="/SOUP/Images/logo.png" style="width:50%;margin-top:5px;">
+
+</div>
+<div class="fila">
+  <button class="button" style="width: 49%;" onclick="openListarPor('Curso')">Estudiantes por Curso</button>
+  <button class="button" style="width: 49%;" onclick="openListarPor('Estudiante')">Cursos de un estudiante</button>
+</div>
+
+<div id="Curso">
+
+<div class="box" style="width: 75%;">
+<h1 style="color: white">Cursos</h1>
+<div class="fila">	<!--Si se selecciona un boton solo su "pestaña" sera mostrada -->
+  <button class="button" onclick="openCity(event, 'Primero')">1er</button>
+  <button class="button" onclick="openCity(event, 'Segundo')">2do</button>
+  <button class="button" onclick="openCity(event, 'Tercero')">3ro</button>
+  <button class="button" onclick="openCity(event, 'Cuarto')">4to</button>
+  <button class="button" onclick="openCity(event, 'Quinto')">5to</button>
+</div>
+
+<!--Esta es la pestaña de primero-->
+<div id="Primero" class="tabcontent" style="background-color: #9ee000;">
+
+    <a href="/SOUP/SOUPController?action=mostrarPorCurso&idCurso=111">Arte Computacional </a><BR>
+	<a href="/SOUP/SOUPController?action=mostrarPorCurso&idCurso=112">Fundamentos De La Computacion </a><BR>
+	<a href="/SOUP/SOUPController?action=mostrarPorCurso&idCurso=121">Ciencias De La Computación </a><BR>
+	<a href="/SOUP/SOUPController?action=mostrarPorCurso&idCurso=122">Estructuras Discretas I </a><BR>
+
+
+</div>
+<!--Esta es la pestaña de segundo -->
+<div id="Segundo" class="tabcontent" style="display:none;background-color: #9ee000;">
+
+  	<a href="/SOUP/SOUPController?action=mostrarPorCurso&idCurso=213">Arquitectura De Computadores</a><BR>
+ 	<a href="/SOUP/SOUPController?action=mostrarPorCurso&idCurso=211">Ciencias De La Computación II</a><BR>
+	<a href="/SOUP/SOUPController?action=mostrarPorCurso&idCurso=212">Desarrollo Basado En Plataformas</a><BR>
+	
+	<a href="/SOUP/SOUPController?action=mostrarPorCurso&idCurso=222"> Algebra Lineal Y Numérica</a><BR>
+	<a href="/SOUP/SOUPController?action=mostrarPorCurso&idCurso=224"> Algoritmos Y Estructuras De Datos</a><BR>
+	<a href="/SOUP/SOUPController?action=mostrarPorCurso&idCurso=221"> Base De Datos I</a><BR>
+	<a href="/SOUP/SOUPController?action=mostrarPorCurso&idCurso=223"> Teoria De La Computacion</a>
+
+</div>
+
+
+<div id="Tercero" class="tabcontent" style="display:none;background-color: #9ee000;">
+
+  	<a href="/SOUP/SOUPController?action=mostrarPorCurso&idCurso=311"> Analisis Exploratorio De Datos Espaciales</a><BR>
+	<a href="/SOUP/SOUPController?action=mostrarPorCurso&idCurso=312"> Analisis Y Diseño De Algoritmos</a><BR>
+	<a href="/SOUP/SOUPController?action=mostrarPorCurso&idCurso=313"> Base De Datos II</a><BR>
+	<a href="/SOUP/SOUPController?action=mostrarPorCurso&idCurso=314">Ecuaciones Diferenciales</a><BR>
+	<a href="/SOUP/SOUPController?action=mostrarPorCurso&idCurso=315">Ingenieria De SoftWare I</a><BR>
+	
+	<a href="/SOUP/SOUPController?action=mostrarPorCurso&idCurso=322">Ingenieria De SoftWare II</a><BR>
+	<a href="/SOUP/SOUPController?action=mostrarPorCurso&idCurso=321">Estructura De Datos Avanzados</a><BR>
+	<a href="/SOUP/SOUPController?action=mostrarPorCurso&idCurso=323">Matematica Aplicada A La Computacion</a><BR>
+	<a href="/SOUP/SOUPController?action=mostrarPorCurso&idCurso=324">Programacion Competitiva</a><BR>
+	<a href="/SOUP/SOUPController?action=mostrarPorCurso&idCurso=325">Sistemas Operativos</a>
+</div>
+
+<div id="Cuarto" class="tabcontent" style="display:none;background-color: #9ee000;" >
+
+  	<a href="/SOUP/SOUPController?action=mostrarPorCurso&idCurso=411">Computacion Grafica</a><BR>
+	<a href="/SOUP/SOUPController?action=mostrarPorCurso&idCurso=412"> Desarrollo De Software Empresarial</a><BR>
+	<a href="/SOUP/SOUPController?action=mostrarPorCurso&idCurso=413"> Inteligencia Artificial</a><BR>
+	<a href="/SOUP/SOUPController?action=mostrarPorCurso&idCurso=414">Redes Y Comunicacion</a><BR>
+	
+	<a href="/SOUP/SOUPController?action=mostrarPorCurso&idCurso=421">Computacion Paralela Distribuida</a><BR>
+	<a href="/SOUP/SOUPController?action=mostrarPorCurso&idCurso=422">Fisica Computacional</a><BR>
+	<a href="/SOUP/SOUPController?action=mostrarPorCurso&idCurso=423">Interaccion Humano-Computador</a><BR>
+	<a href="/SOUP/SOUPController?action=mostrarPorCurso&idCurso=424">Seguridad Computacional</a><BR>
+	<a href="/SOUP/SOUPController?action=mostrarPorCurso&idCurso=425">Topicos En Ingenieria De Software</a>
+</div>
+
+<div id="Quinto" class="tabcontent" style="display:none;background-color: #9ee000;">
+
+    <a href="/SOUP/SOUPController?action=mostrarPorCurso&idCurso=511">Computacion Bioinspirada</a><BR>
+	<a href="/SOUP/SOUPController?action=mostrarPorCurso&idCurso=512">Computacion Molecular Biologica</a><BR>
+	<a href="/SOUP/SOUPController?action=mostrarPorCurso&idCurso=513"> Topicos En Base De Datos</a><BR>
+	<a href="/SOUP/SOUPController?action=mostrarPorCurso&idCurso=514">Topicos En IA</a><BR>
+	
+	<a href="/SOUP/SOUPController?action=mostrarPorCurso&idCurso=521">Computacion En La Nube</a><BR>
+	<a href="/SOUP/SOUPController?action=mostrarPorCurso&idCurso=522">Liderazgo Y Desarrollo Empresarial</a><BR>
+	<a href="/SOUP/SOUPController?action=mostrarPorCurso&idCurso=523">Programacion En Dispositivos Moviles</a><BR>
+	<a href="/SOUP/SOUPController?action=mostrarPorCurso&idCurso=524">Programación De Videojuegos</a><BR>
+	<a href="/SOUP/SOUPController?action=mostrarPorCurso&idCurso=525">Robotica
+	</a>
+ </div>
+
+<br>
+
+</div>
+</div>
+<!--Redireccioina al servlet para mostrar los cursos de un estudiante -->
+<div id="Estudiante" style="display:none">
+<div class="box" style="width: 23%;">
+<h1 style="color: white">Estudiante</h1>
+
+<form id = "form" name ="form" action=/SOUP/SOUPController?action=mostrarEstudiante method="post">
+			<input class="ingrese" type = "number" id = "mycui" name = "mycui" placeholder="CUI"><br>
+			<INPUT TYPE="Button" class= "button" VALUE="Buscar" onClick="validar(mycui)">
+</form>
+</div>
+</div>
+
+
+
+<script>
+
+
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+function openListarPor(cityName) {
+	  if(cityName=="Curso"){
+		  document.getElementById("Curso").style.display = "block";
+	  		document.getElementById("Estudiante").style.display = "none";}
+	  if(cityName=="Estudiante"){
+	  		document.getElementById("Estudiante").style.display = "block";
+	  	  	document.getElementById("Curso").style.display = "none";}
+	}
+
+
+function cuiestructura(inputtxt)
+{
+  var x= /^[0-9]{8}$/ ;
+  if (inputtxt.value.match(x))
+ {
+    return true; 
+ }
+  else
+  {
+    alert('El cui debe tener 8 digitos');
+    return false;
+  }
+}
+
+function validar(cui) 
+{ 
+     if(cuiestructura(cui))
+     {
+      document.getElementById("form").submit();
+      alert('Formulario enviado');
+      return true;
+     }
+     else
+     {
+      return false;
+     }
+
+}
+
+</script>
+
+</body>
+</html>

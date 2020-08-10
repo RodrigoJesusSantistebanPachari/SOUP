@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>SOUP|Home</title>
+
+
+<style>
+body {
+  background-image: url("/SOUP/Images/background.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: cover;
+}
+
+.box {
+    margin: auto;
+  	font-size: 16px;
+	width: 23%;
+	text-align: center;
+	color: white
+}
+
+.button {
+	background-color: #9ee000;
+  	border: 2px solid #003A83;
+  	color: #003A83;
+	padding: 10px;
+  	font-size: 16px;
+	width: 100%;
+
+	}
+
+.button:hover {
+  background-color: #003A83;
+  color: #9ee000;
+}
+
+
+.seleccion
+{
+  width: 100%;
+  background-color: #9ee000;
+}
+
+</style>
+
+<body>
+
+<!--Pagina de inicio del soup -->
+<div class="box" style="margin-top: 100px;">	
+
+<img src="/SOUP/Images/logo.png" style="width:50%;margin-top:50px;"><!--Encabezado: Titulo y logo -->
+<p style="color: white">Bienvenido</p>
+</div>
+
+
+<div class="box" style="margin-top: 40px; width: 50%;">
+
+<!--Redirecciona al html de listar -->
+   <a href="HTMLFiles/Mostrar/ListarIndex.html"><button type="button" id="boton" class="button">Listar</button></a>
+   
+<!--Redirecciona la html  de matricular -->
+   <a href="HTMLFiles/TI.html"><button type="button" id="boton2" class="button">Matricular</button></a>
+
+<!--Redirecciona la html de eliminar/ registrar estudiantes -->
+	<a href="clave.jsp"><button type="button" id="boton" class="button">Registrar/Eliminar Estudiante</button></a>
+</div>
+
+</body>
+</html>
