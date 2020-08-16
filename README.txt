@@ -7,7 +7,7 @@ Programas necesarios para ejecutarlo:
 *tomcat
 *eclipse
 
-Exporte el proyecto al IDE eclipse y ejecutarlo
+Importe el proyecto al IDE eclipse y ejecutarlo
 
 Se necesitara tener las tablas previamente explicadas en la base de datos
 
